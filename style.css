@@ -1,0 +1,132 @@
+:root{
+    --stat-degree: 0%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main{
+    height: 70%;
+    width: 70%;
+    /* border: 1px solid black; */
+    border-radius: 15px;
+    padding: 0.8rem;
+    padding-left: 2rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#site-title{
+    font-size: 5rem;
+    margin-bottom: 0.5rem;
+}
+
+#site-desc{
+    font-size: 1rem;
+    margin-top: 5rem;
+}
+
+.form-1{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0.5rem;
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+#input-label{
+    font-weight: bold;
+}
+
+#input-button{
+    width: 42ch;
+    height: 1.8rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-left: 5px;
+} 
+
+#search-button{
+    width: 14ch;
+    height: 1.8rem;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.stats{
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.circle{
+    width: 100px;
+    height: 100px;
+    margin-top: 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;    
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    background: conic-gradient(rgb(255, 255, 255) var(--stat-degree, 0%), rgb(255, 255, 255) 0%);
+}
+
+.easy-stats{
+    border: 10px solid rgb(81, 248, 81);
+    background: conic-gradient(rgb(81, 248, 81) var(--stat-degree, 0%), rgb(255, 255, 255) 0%);
+}
+
+.mid-stats{
+    border: 10px solid rgb(248, 160, 97);
+    background: conic-gradient(rgb(248, 160, 97) var(--stat-degree, 0%), rgb(255, 255, 255) 0%);
+}
+
+.hard-stats{
+    border: 10px solid rgb(247, 82, 82);
+    background: conic-gradient(rgb(247, 82, 82) var(--stat-degree, 0%), rgb(255, 255, 255) 0%);
+}
+
+.circle span{
+    position: relaive;
+    z-index: 3;
+}
+
+.card{
+    border: 1px solid black;
+    border-radius: 10px;
+    max-width: 40%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    padding: 0.5rem 2rem;
+    display: none;
+}
