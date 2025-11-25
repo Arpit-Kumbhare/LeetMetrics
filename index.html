@@ -3,58 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Decription" content="ebsbvewbviouwenvinwrvinerw">
-    <!-- <meta name="robots" content="nofollow, noindex"> -->
-    <meta name="keywords" content="leetcode, web development, practice code, leetmetrics">
-    
+    <meta name="description" content="LeetCode Metrics - Track your coding progress with beautiful visual statistics">
+    <meta name="keywords" content="leetcode, web development, practice code, leetmetrics, coding statistics">
     <link rel="stylesheet" href="style.css">
-
-    <title>Leet Metric</title>
-
+    <title>LeetMetrics - Your LeetCode Dashboard</title>
 </head>
 <body>
-
     <div class="wrapper">
-        <div class="main">
+        <!-- Background animation elements -->
+        <div class="background-elements">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
 
-            <h1 id="site-title"> Leetcode Metrics</h1>
-            <span id="site-decs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam libero, rerum maiores dolore eum magni reprehenderit! Et nostrum illo dolorem!</span>
+        <div class="container">
+            <div class="header-section">
+                <div class="header-content">
+                    <h1 id="site-title">📊 LeetMetrics</h1>
+                    <span id="site-desc">Track your LeetCode journey with beautiful statistics and real-time progress insights</span>
+                </div>
+                <div class="header-accent"></div>
+            </div>
 
-            <form class="form-1">
-                <!-- <label for="username-input" id="input-label">Username :-</label> -->
-
-                <input type="text" id="input-button" name="username" placeholder="Enter the username you want to search" required>
-                
-                <button id="search-button">Search</button>
+            <form class="search-form">
+                <div class="search-wrapper">
+                    <input 
+                        type="text" 
+                        id="input-button" 
+                        name="username" 
+                        placeholder="Enter LeetCode username..." 
+                        required
+                        autocomplete="off"
+                    >
+                    <button id="search-button" class="search-btn">
+                        <span class="btn-text">Search</span>
+                        <span class="btn-icon">→</span>
+                    </button>
+                </div>
+                <div class="search-hint">Search to see your stats</div>
             </form>
 
-            <div class="stats">
-                <div class="easy-stats circle">
-                    <span class="easy-label"></span>
-                    <span>Easy</span>
+            <div class="stats-container">
+                <div class="easy-stats circle-stat">
+                    <div class="circle-inner">
+                        <span class="easy-label">0/0</span>
+                    </div>
+                    <span class="stat-label">Easy</span>
                 </div>
 
-                <div class="mid-stats circle">
-                    <span class="mid-label"></span>
-                    <span>Medium</span>
+                <div class="mid-stats circle-stat">
+                    <div class="circle-inner">
+                        <span class="mid-label">0/0</span>
+                    </div>
+                    <span class="stat-label">Medium</span>
                 </div>
 
-                <div class="hard-stats circle">
-                    <span class="hard-label"></span>
-                    <span>Hard</span>
+                <div class="hard-stats circle-stat">
+                    <div class="circle-inner">
+                        <span class="hard-label">0/0</span>
+                    </div>
+                    <span class="stat-label">Hard</span>
                 </div>
-
             </div>
 
             <div class="card">
-
+                <!-- Card content dynamically populated -->
             </div>
 
-        </div>     
+            <footer class="footer-info">
+                <p>Built with ❤️ | Powered by LeetCode Stats API</p>
+            </footer>
+        </div>
     </div>
 
-
-    
-<script src="script.js" defer></script>    
+    <script src="script.js" defer></script>
 </body>
 </html>

@@ -52,25 +52,23 @@ document.addEventListener('DOMContentLoaded', function(){
         }
         finally{
             searchButton.disabled = false;
-            searchButton.textContent = "Search";
+            searchButton.innerHTML = '<span class="btn-text">Search</span><span class="btn-icon">→</span>';
         }
     }
     
     function updateStats(total, solved, label, stats){
         const percent = (solved/total)*100;
-        stats.style.setProperty("--stat-degree", `${percent}%`);
+        stats.querySelector(".circle-inner").style.setProperty("--stat-degree", `${percent}%`);
         label.textContent = `${solved}/${total}`;
         console.log(percent);
     }
 
     // display user data
     function displayData(data){
-        const totalQues = data.totalQuestions;
         const totalEasyQues = data.totalEasy;
         const totalMidQues = data.totalMedium;
         const totalhardQues = data.totalHard;
 
-        const solvedTotal = data.totalSolved;
         const solvedEasy = data.easySolved;
         const solvedMid = data.mediumSolved;
         const solvedHard = data.hardSolved;
@@ -88,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
         console.log(cardData);
 
-        statsCard.style.display = "block";
+        statsCard.classList.add("visible");
 
         statsCard.innerHTML = cardData.map(
             ({label, Value}) =>   
@@ -107,7 +105,14 @@ document.addEventListener('DOMContentLoaded', function(){
         if(validateUsername(userName)){
             fetchUserDetails(userName);
         }
+    })
 
+    // Allow search on Enter key
+    searchInput.addEventListener('keypress', function(event){
+        if(event.key === 'Enter'){
+            event.preventDefault();
+            searchButton.click();
+        }
     })
 
 })
